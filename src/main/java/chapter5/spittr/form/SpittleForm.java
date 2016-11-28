@@ -1,4 +1,4 @@
-package chapter5.spittr.web;
+package chapter5.spittr.form;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

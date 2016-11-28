@@ -1,7 +1,8 @@
-package chapter5.spittr.config;
+package chapter5.spittr.util;
 
 
-import chapter5.spittr.web.WebConfig;
+import chapter5.spittr.config.RootConfig;
+import chapter5.spittr.config.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**

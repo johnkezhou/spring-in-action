@@ -1,4 +1,4 @@
-package chapter5.spittr.web;
+package chapter5.spittr.controller;
 
 import chapter5.spittr.base.Spitter;
 import chapter5.spittr.data.ISpitterRepository;

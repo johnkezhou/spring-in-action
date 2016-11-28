@@ -1,4 +1,4 @@
-package chapter5.spittr.web;
+package chapter5.spittr.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

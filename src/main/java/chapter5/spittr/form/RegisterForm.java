@@ -1,4 +1,4 @@
-package chapter5.spittr.web;
+package chapter5.spittr.form;
 
 import chapter5.spittr.base.Spitter;
 
