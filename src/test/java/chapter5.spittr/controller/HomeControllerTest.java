@@ -1,4 +1,4 @@
-package chapter5.spittr.controller;
+package chapter5.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;

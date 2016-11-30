@@ -1,4 +1,4 @@
-package chapter5.spittr.config;
+package chapter5.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

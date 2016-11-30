@@ -1,14 +1,14 @@
-package chapter5.spittr.util;
+package chapter5.util;
 
 
-import chapter5.spittr.config.RootConfig;
-import chapter5.spittr.config.WebConfig;
+import chapter5.config.RootConfig;
+import chapter5.config.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
  * Created by daoya <daoya@2dfire.com> on 2016/11/24.
  */
-public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
+public class SpitterWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
     @Override
     protected Class<?>[] getRootConfigClasses() {

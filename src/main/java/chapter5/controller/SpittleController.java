@@ -1,8 +1,8 @@
-package chapter5.spittr.controller;
+package chapter5.controller;
 
-import chapter5.spittr.base.Spittle;
-import chapter5.spittr.data.ISpittleRepository;
-import chapter5.spittr.form.SpittleForm;
+import chapter5.base.Spittle;
+import chapter5.data.ISpittleRepository;
+import chapter5.form.SpittleForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

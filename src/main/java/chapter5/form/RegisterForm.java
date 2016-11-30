@@ -1,6 +1,6 @@
-package chapter5.spittr.form;
+package chapter5.form;
 
-import chapter5.spittr.base.Spitter;
+import chapter5.base.Spitter;
 
 /**
  * Created by daoya <daoya@2dfire.com> on 2016/11/24.

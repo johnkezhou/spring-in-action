@@ -1,6 +1,6 @@
-package chapter5.spittr.data;
+package chapter5.data;
 
-import chapter5.spittr.base.Spittle;
+import chapter5.base.Spittle;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package chapter5.spittr.data.impl;
+package chapter5.data.impl;
 
-import chapter5.spittr.base.Spittle;
-import chapter5.spittr.data.ISpittleRepository;
+import chapter5.base.Spittle;
+import chapter5.data.ISpittleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.RowMapper;

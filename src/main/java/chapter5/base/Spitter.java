@@ -1,4 +1,4 @@
-package chapter5.spittr.base;
+package chapter5.base;
 
 
 import org.hibernate.validator.constraints.Email;

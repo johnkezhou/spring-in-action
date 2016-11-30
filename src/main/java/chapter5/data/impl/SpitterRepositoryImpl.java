@@ -1,11 +1,11 @@
-package chapter5.spittr.data.impl;
+package chapter5.data.impl;
 
-import chapter5.spittr.base.Spitter;
-import chapter5.spittr.base.Spittle;
-import chapter5.spittr.data.ISpitterRepository;
+import chapter5.base.Spitter;
+import chapter5.data.ISpitterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,10 +13,12 @@ import java.sql.SQLException;
 /**
  * Created by daoya <daoya@2dfire.com> on 2016/11/24.
  */
+@Repository
 public class SpitterRepositoryImpl implements ISpitterRepository {
 
 
     private JdbcOperations jdbcOperations;
+
 
     @Autowired
     public SpitterRepositoryImpl(JdbcOperations jdbcOperations) {
