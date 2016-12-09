@@ -62,7 +62,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
-      <version>5.0.0.M3</version>
+      <version>4.2.5.RELEASE</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
     <dependency>
@@ -89,6 +89,14 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <version>1.4.1.RELEASE</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.h2/h2 -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+
 
   </dependencies>
   <build>
