@@ -1,6 +1,6 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page session="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>Spitter</title>
@@ -10,8 +10,25 @@
   </head>
   <body>
     <h1>Welcome to Spitter</h1>
-
-    <a href="<c:url value="/spittles" />">Spittles</a> | 
-    <a href="<c:url value="/spitter/register" />">Register</a>
+    <form name="itemsForm" action="/city/list_city_info" method="post">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>CountryCode</th>
+        <th>District</th>
+        <th>Population</th>
+      </tr>
+      <c:forEach items="${cities}" var="city">
+        <tr>
+          <td>${city.id}</td>
+          <td>${city.name}</td>
+          <td>${city.countryCode}</td>
+          <td>${city.district}</td>
+          <td>${city.population}</td>
+        </tr>
+      </c:forEach>
+    </table>
+      </form>
   </body>
 </html>

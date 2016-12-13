@@ -12,7 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class HomeController {
     @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String home(){
+    public String home(Model model){
         return "home";
     }
+
+    @RequestMapping(value = "/profile", method = RequestMethod.GET)
+    public String profile(){
+        return "profile";
+    }
+
+
 }
