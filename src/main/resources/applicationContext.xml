@@ -34,9 +34,15 @@
     </bean>
 
 
+
     <bean id="citySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:mybatis/spring-mybatis.xml"/>
+        <!--<property name="configLocation" value="classpath:mybatis/spring-mybatis.xml"/>-->
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:chapter5.mapper/city/CityMapper.xml</value>
+            </list>
+        </property>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

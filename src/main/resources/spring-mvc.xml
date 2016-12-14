@@ -48,5 +48,7 @@
         <!--<property name="maxInMemorySize" value="40960" />-->
     <!--</bean>-->
 
-    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <mvc:annotation-driven/>
+    <mvc:resources mapping="/css/**" location="/css/" />
+    <!--<mvc:default-servlet-handler/>-->
 </beans>

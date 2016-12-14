@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper>
+<mapper namespace="chapter5.mapper.CityMapper">
     <resultMap id="BaseResultMap" type="chapter5.bean.City">
-        <result column="ID" property="id" jdbcType="INT"/>
-        <result column="Name" property="name" jdbcType="VARCHAR"/>
-        <result column="CountryCode" property="countrCode" jdbcType="VARCHAR"/>
-        <result column="District" property="district" jdbcType="VARCHAR"/>
-        <result column="Population" property="population" jdbcType="INT"/>
+        <result column="ID" property="id" jdbcType="INTEGER" javaType="int"/>
+        <result column="Name" property="name" jdbcType="VARCHAR" javaType="String"/>
+        <result column="CountryCode" property="countrCode" jdbcType="VARCHAR" javaType="String"/>
+        <result column="District" property="district" jdbcType="VARCHAR" javaType="String"/>
+        <result column="Population" property="population" jdbcType="INTEGER" javaType="int"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -17,6 +17,6 @@
         SELECT
         <include refid="Base_Column_List"/>
         FROM city
-        WHEN ID = #{id, jdbcType=int}
+        WHEN ID = #{id, jdbcType=INTEGER}
     </select>
 </mapper>

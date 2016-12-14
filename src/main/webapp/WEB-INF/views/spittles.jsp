@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>Spitter</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/style.css" />" >
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/style.css" />" >
   </head>
   <body>
     <div class="spittleForm">

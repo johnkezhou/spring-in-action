@@ -6,11 +6,11 @@
     <title>Spitter</title>
     <link rel="stylesheet" 
           type="text/css" 
-          href="<c:url value="/resources/style.css" />" >
+          href="<c:url value="/css/style.css" />" >
   </head>
   <body>
     <h1>Welcome to Spitter</h1>
-    <form name="itemsForm" action="/city/list_city_info" method="post">
+    <%--<form name="itemsForm" action="/city/list_city_info" method="post">--%>
     <table>
       <tr>
         <th>ID</th>
@@ -29,6 +29,6 @@
         </tr>
       </c:forEach>
     </table>
-      </form>
+      <%--</form>--%>
   </body>
 </html>

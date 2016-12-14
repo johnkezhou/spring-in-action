@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Book List</title>
-<style type="text/css">@import url("<c:url value="/resources/style.css"/>");</style>
+<style type="text/css">@import url("<c:url value="/css/style.css"/>");</style>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
         <td>${book.title}</td>
         <td>${book.isbn}</td>
         <td>${book.author}</td>
-        <td><a href="book_edit/${book.id}">Edit</a></td>
+        <%--<td><a href="book_edit/${book.id}">Edit</a></td>--%>
     </tr>
 </c:forEach>
 </table>

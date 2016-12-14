@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by daoya <daoya@2dfire.com> on 2016/12/12.
@@ -23,13 +25,13 @@ public class CityController {
     private ICityService cityService;
 
 
-    @RequestMapping(value = "/list_city_info", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView listCityInfo(){
+    @RequestMapping(value = "/city_list", method = {RequestMethod.GET, RequestMethod.POST})
+    public String cityList(Model model){
         City city = cityService.queryByID(1);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("cities", city);
-        modelAndView.setViewName("city/cities");
-        return modelAndView;
+        List<City> cities = new ArrayList<City>();
+        cities.add(city);
+        model.addAttribute("cities", cities);
+        return "city_list";
     }
 
     @RequestMapping(value = "/get_city_by_id", method = {RequestMethod.GET, RequestMethod.POST})
