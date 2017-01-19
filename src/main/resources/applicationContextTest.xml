@@ -12,7 +12,7 @@
 
     <context:annotation-config/>
 
-<!--<mvc:annotation-driven/>-->
+    <!--<mvc:annotation-driven/>-->
     <!--自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器-->
     <context:property-placeholder
             ignore-unresolvable="true" ignore-resource-not-found="true"
@@ -64,14 +64,25 @@
         <property name="basePackage" value="chapter5.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="citySqlSessionFactory"/>
     </bean>
-    <!--<bean id="cityMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
-    <!--<property name="mapperInterface" value="chapter5.mapper.CityMapper"/>-->
-    <!--<property name="sqlSessionFactory" ref="citySqlSessionFactory"/>-->
-    <!--</bean>-->
+
+    <bean id="cityMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="chapter5.mapper.CityMapper"/>
+        <property name="sqlSessionFactory" ref="citySqlSessionFactory"/>
+    </bean>
+
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <tx:annotation-driven transaction-manager="transactionManager" order="2"/>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="chapter5.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="citySqlSessionFactory"/>
+    </bean>
+    <!--<bean id="cityMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+    <!--<property name="mapperInterface" value="chapter5.mapper.CityMapper"/>-->
+    <!--<property name="sqlSessionFactory" ref="citySqlSessionFactory"/>-->
+    <!--</bean>-->
 </beans>

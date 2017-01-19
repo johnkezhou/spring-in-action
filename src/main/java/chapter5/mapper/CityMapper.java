@@ -13,4 +13,6 @@ public interface CityMapper {
 
     City selectByID(int id);
 
+    List<City> selectCityList();
+
 }

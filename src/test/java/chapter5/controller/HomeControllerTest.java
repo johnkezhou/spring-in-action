@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 /**
  * Created by daoya <daoya@2dfire.com> on 2016/11/28.
  */
-@ContextConfiguration(locations = { "classpath:application-test.xml" })
+@ContextConfiguration(locations = { "classpath:applicationContext.xml" })
 public class HomeControllerTest {
 
     @Test

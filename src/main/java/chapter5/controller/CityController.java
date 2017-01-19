@@ -26,10 +26,8 @@ public class CityController {
 
 
     @RequestMapping(value = "/city_list", method = {RequestMethod.GET, RequestMethod.POST})
-    public String cityList(Model model){
-        City city = cityService.queryByID(1);
-        List<City> cities = new ArrayList<City>();
-        cities.add(city);
+    public String getCityList(Model model){
+        List<City> cities = cityService.listCity();
         model.addAttribute("cities", cities);
         return "city_list";
     }

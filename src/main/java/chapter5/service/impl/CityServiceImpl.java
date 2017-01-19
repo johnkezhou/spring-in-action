@@ -1,6 +1,7 @@
 package chapter5.service.impl;
 
 import chapter5.bean.City;
+import chapter5.dao.ICityDao;
 import chapter5.mapper.CityMapper;
 import chapter5.service.ICityService;
 import org.springframework.stereotype.Service;
@@ -15,15 +16,14 @@ import java.util.List;
 public class CityServiceImpl implements ICityService {
 
     @Resource
-    private CityMapper cityMapper;
+    private ICityDao cityDao;
 
     public City queryByID(int id) {
-        City city = cityMapper.selectByID(id);
+        City city = cityDao.queryByID(id);
         return city;
     }
 
     public List<City> listCity(){
-        List<City> cities = null;
-        return cities;
+        return cityDao.listCity();
     }
 }

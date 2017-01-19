@@ -4,7 +4,7 @@
     <resultMap id="BaseResultMap" type="chapter5.bean.City">
         <result column="ID" property="id" jdbcType="INTEGER" javaType="int"/>
         <result column="Name" property="name" jdbcType="VARCHAR" javaType="String"/>
-        <result column="CountryCode" property="countrCode" jdbcType="VARCHAR" javaType="String"/>
+        <result column="CountryCode" property="countryCode" jdbcType="VARCHAR" javaType="String"/>
         <result column="District" property="district" jdbcType="VARCHAR" javaType="String"/>
         <result column="Population" property="population" jdbcType="INTEGER" javaType="int"/>
     </resultMap>
@@ -17,6 +17,10 @@
         SELECT
         <include refid="Base_Column_List"/>
         FROM city
-        WHEN ID = #{id, jdbcType=INTEGER}
+        WHERE ID = #{id, jdbcType=INTEGER}
+    </select>
+
+    <select id="selectCityList" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM city
     </select>
 </mapper>
